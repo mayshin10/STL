@@ -16,7 +16,7 @@
 
 Sequence Containers
 --------------------------------------
-A sequence container is a container that stores objects of the smae type in a linear arrangement
+A sequence container is a container that stores objects of the smae type in a linear arrangement.
 
 The functions that this library allows are
 
