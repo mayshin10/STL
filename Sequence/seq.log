@@ -1,0 +1,104 @@
+
+ *** VECTOR *** 
+
+empty? : yes
+cap    : 0
+size   : 0
+
+empty? : yes
+cap    : 2
+size   : 0
+
+
+v1[0]  : 16
+v1[1]  : 32
+
+v1[0]  : 16
+v1[1]  : 32
+v1[2]  : 128
+
+cap    : 4
+size   : 0
+
+front  : yes
+back   : yes
+
+*it    : 16
+*it    : 32
+*it    : 128
+
+ *** DEQUE *** 
+
+empty? : no
+size   : 4
+
+size   : 2
+
+d1[0]  : 1024
+d1[1]  : 2048
+d1[2]  : 16
+d1[3]  : 512
+
+*it    : 1024
+*it    : 2048
+*it    : 16
+*it    : 512
+
+d2[0] : 2048
+d2[1] : 16
+d2[2] : 512
+
+front : 2048
+back  : 512
+
+ *** LIST *** 
+
+empty? : yes
+size   : 0
+
+*it    : 64
+*it    : 32
+*it    : 16
+*it    : 8
+*it    : 2
+*it    : 4
+
+*it    : 64
+*it    : 16
+*it    : 8
+*it    : 2
+
+*it    : 16
+*it    : 2
+*it    : 64
+*it    : 8
+
+*it    : 16
+*it    : 2
+*it    : 64
+*it    : 8
+*it    : 16
+*it    : 2
+*it    : 64
+*it    : 8
+
+*it    : 8
+*it    : 64
+*it    : 2
+*it    : 16
+*it    : 8
+*it    : 64
+*it    : 2
+*it    : 16
+
+*it    : 8
+*it    : 64
+*it    : 2
+*it    : 8
+*it    : 64
+*it    : 2
+
+*it    : 2
+*it    : 64
+*it    : 8
+
