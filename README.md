@@ -13,8 +13,8 @@
 	+ set
 	+ map
 	
-	
- Sequence Containers
+
+  Sequence Containers
 --------------------------------------
 A sequence container is a container that stores objects of the smae type in a linear arrangement
 
