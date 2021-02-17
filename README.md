@@ -1,36 +1,27 @@
 # STL
-## File construction
+ File structure
+--------------------------------------
 * Sequence
-	+ seq.cc
 	+ vector
-		+ vector.h
-		+ vector-def.h
 	+ list
-		+ list.h
-		+ list-def.h
-	+ deque 
-		+ deque.h
-		+deque-def.h
-	
+	+ deque
 * Adaptive
-	+ adp.cc
 	+ stack
-		+ stack.h
-		+ stack-def.h
 	+ queue
-		+ queue.h
-		+ queue-def.h
 	+ pri_queue
-		+pri_queue.h
-		+pri_queue-def.h
-
 * Associate
-	+ asc.cc
 	+ set
-		+ set.h
-		+ set-def.h
-	+ map	
-		+ map.h
-		+ map-def.h
-=================================
-# 1.Seq
+	+ map
+	
+1. Sequence Containers
+--------------------------------------
+A sequence container is a container that stores objects of the smae type in a linear arrangement
+
+The functions that this library allows are
+
+
+|expression|contents1|ex|
+|:---|---:|:---:|
+|dddd|dddd|ddddd|
+|dddd|dddd|ddddd|
+|dddd|dddd|ddddd|
