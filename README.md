@@ -1,8 +1,8 @@
 # STL
 ## File construction
-*Sequence
-	>vector
-	>	>vector.h
+* Sequence
+	+ vector
+		+ vector.h
 	>	>vector-def.h
 	>list	>list.h
 	>	>list-def.h
