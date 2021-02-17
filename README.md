@@ -17,8 +17,8 @@
 Sequence Containers
 --------------------------------------
 A sequence container is a container that stores objects of the same type in a linear arrangement. These are the functions supported by the Sequence containers in this library.
+
 |hi|
-|expression|contents1|ex|
 |:---|---:|:---:|
 |dddd|dddd|ddddd|
 |dddd|dddd|ddddd|
