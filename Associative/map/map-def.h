@@ -39,32 +39,36 @@ struct node_map{
 template<typename Key, typename Value>
 class map_t{
     public:
-        map_t();
-        bool empty() const;
-        size_t size() const;
-        
         typedef iterator_map<Key, Value> iterator;
         typedef struct node_map<Key, Value> node;
         typedef struct node_map<Key, Value>* position;
+	    
+	map_t();
+	map_t(const map_t& m);
+	map_t operator=(const map_t m);
+	~map_t();
 
+        bool empty() const;
+        size_t size() const;
+	std::pair<iterator, bool> insert(std::pair<Key, Value> pr);
         iterator operator[](const Key& key);
-        position insert_assist(Key key, position& pos, iterator& iter);
-        map_t& operator=(const map_t& m);
         iterator begin();
         iterator end();
         iterator find(const Key& key);
-        Key erase(const Key& key);
+        size_t count(Key& key);
+	Key erase(const Key& key);
         Key erase(iterator& iter);
         void clear();
-        void copy_assist(position pos);
+ 
+    private:
+        position map;
+        size_t num_elements;
+	position insert_assist(Key key, position& pos, iterator& iter);
+	position copy_assist(const position& mm);
         position find_assist(Key key, position& map);
         position erase_assist(Key key, position& map);
         position erase_iter_assist(iterator& iter);
         void clear_assist(position& pos);
-
-    private:
-        position map;
-        size_t num_elements;
 };
 
 #endif

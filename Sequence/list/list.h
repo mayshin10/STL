@@ -14,7 +14,9 @@ template <typename T>
 iterator_L<T>::iterator_L(const iterator_L<T>& it) { ptr = it.ptr; }
 
 template <typename T>
-iterator_L<T>::~iterator_L() {}
+iterator_L<T>::~iterator_L() {
+    	ptr = 0;
+}
 
 template <typename T>
 T& iterator_L<T>::operator*() const { return ptr->value; }
@@ -87,7 +89,10 @@ list_t<T>::list_t(const list_t& v) {
 }
 
 template<typename T>
-list_t<T>::~list_t() {}
+list_t<T>::~list_t() {
+    	clear();
+     	delete[] array;
+}
 
 template<typename T>
 list_t<T>& list_t<T>::operator=(const list_t& v) {
@@ -245,6 +250,7 @@ void list_t<T>::unique() {
 
 template<typename T>
 void list_t<T>::clear() {
+	array = 0;
 	num_elements = 0;
 }
 

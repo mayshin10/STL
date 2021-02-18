@@ -86,6 +86,37 @@ map_t<Key, Value>::map_t(){
 }
 
 template<typename Key, typename Value>
+struct node_map<Key, Value>* map_t<Key, Value>::copy_assist(const position& mm){
+    position pos = new node;
+    pos-> first = mm->first;
+    pos-> second = mm->second;
+    if(mm->left != NULL)
+        pos->left = copy_assist(mm->left);
+    if(mm->right != NULL)
+        pos->right = copy_assist(mm->right);
+    return pos;
+}
+
+template<typename Key, typename Value>
+map_t<Key, Value>::map_t(const map_t& m){
+    num_elements = m.num_elements;
+    map = copy_assist(m.map);
+}
+
+template<typename Key, typename Value>
+map_t<Key, Value> map_t<Key, Value>::operator=(const map_t m){
+    num_elements = m.num_elements;
+    map = copy_assist(m.map);
+    return *this;
+}
+
+template<typename Key, typename Value>
+map_t<Key, Value>::~map_t(){
+    clear();
+}
+
+
+template<typename Key, typename Value>
 bool map_t<Key, Value>::empty() const{
     return map==NULL;
 }
@@ -93,6 +124,19 @@ bool map_t<Key, Value>::empty() const{
 template<typename Key, typename Value>
 size_t map_t<Key, Value>::size() const{
     return num_elements;
+}
+
+template<typename Key, typename Value>
+std::pair<iterator_map<Key, Value>, bool> map_t<Key, Value>::insert(std::pair<Key, Value> pr){
+   iterator iter;
+   iter.root = map;
+   insert_assist(pr.first, map, iter);
+   if(iter.ptr == NULL)
+       return {NULL, 0};
+   else{
+       iter.ptr->second = pr.second;	   
+       return {iter, 1};
+   }
 }
 
 template<typename Key, typename Value>
@@ -112,6 +156,9 @@ struct node_map<Key, Value>* map_t<Key, Value>::insert_assist(Key key, position&
         pos->left=pos->right=NULL;
         iter.ptr=pos;
     }
+    else 
+    if(key == pos->first)
+        iter.ptr = NULL;
     else
     if( key < pos->first)
         pos->left=insert_assist(key, pos->left, iter);
@@ -120,24 +167,6 @@ struct node_map<Key, Value>* map_t<Key, Value>::insert_assist(Key key, position&
         pos->right=insert_assist(key, pos->right, iter);
 
     return pos;
-}
-
-template<typename Key, typename Value>
-map_t<Key, Value>& map_t<Key, Value>::operator=(const map_t& m){
-    num_elements=m.num_elements;
-    copy_assist(m.map);
-    return *this;
-}
-
-template<typename Key, typename Value>
-void map_t<Key, Value>::copy_assist(position pos){
-    if(pos!=NULL){
-        iterator iter;
-        insert_assist(pos->first, map ,iter);
-        iter.ptr->second=pos->second;
-        copy_assist(pos->left);
-        copy_assist(pos->right);
-    }
 }
 
 template<typename Key, typename Value>
@@ -271,6 +300,15 @@ struct node_map<Key, Value>* map_t<Key, Value>::erase_iter_assist(iterator& iter
         }
     }
     return iter.ptr;
+}
+
+template<typename Key, typename Value>
+size_t map_t<Key, Value>::count(Key& key){
+    position finded=find_assist(key, map);
+    if(finded==NULL)
+        return 0;
+    else
+        return 1;
 }
 
 template<typename Key, typename Value>

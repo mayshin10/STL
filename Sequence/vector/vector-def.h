@@ -8,9 +8,10 @@ class iterator_v {
 public:
     iterator_v();
     iterator_v(const iterator_v<T> &it);
-
+    ~iterator_v();
     T& operator*() const;
-	iterator_v<T> operator+(size_t s);
+    iterator_v<T> operator+(size_t s);
+    iterator_v<T> operator-(size_t s);
     iterator_v<T> operator++();
     iterator_v<T> operator++(int);
     iterator_v<T> operator--();
@@ -34,6 +35,7 @@ public:
     vector_t();
     vector_t(const vector_t &v);
     vector_t& operator=(const vector_t v);
+    ~vector_t();
 
     typedef iterator_v<T> iterator;
 

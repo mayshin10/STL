@@ -13,12 +13,23 @@ template <typename T>
 iterator_v<T>::iterator_v(const iterator_v<T>& it) { ptr = it.ptr; }
 
 template <typename T>
+iterator_v<T>::~iterator_v() {
+    	ptr = 0;
+}
+
+template <typename T>
 T& iterator_v<T>::operator*() const { return *ptr; }
 
 template <typename T>
 iterator_v<T> iterator_v<T>::operator+(size_t s) {
 	ptr += s;
 	return *this;
+}
+
+template <typename T>
+iterator_v<T> iterator_v<T>::operator-(size_t s) {
+        ptr -= s;
+        return *this;
 }
 
 template <typename T>
@@ -63,6 +74,12 @@ vector_t<T>::vector_t() :
 	array(0),
 	array_size(0),
 	num_elements(0) {
+}
+
+template <typename T>
+vector_t<T>::~vector_t() {
+    clear();
+    delete[] array;
 }
 
 template <typename T>
@@ -174,6 +191,7 @@ void vector_t<T>::pop_back() {
 template <typename T>
 void vector_t<T>::clear() {
 	array = 0;
+	array_size = 0;
 	num_elements = 0;
 }
 

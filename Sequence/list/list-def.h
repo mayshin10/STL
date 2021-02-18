@@ -12,8 +12,8 @@ public:
     ~iterator_L();
 
     T& operator*() const;
-	iterator_L<T> operator+(size_t s);
-	iterator_L<T> operator-(size_t s);
+    iterator_L<T> operator+(size_t s);
+    iterator_L<T> operator-(size_t s);
     iterator_L<T> operator++();
     iterator_L<T> operator++(int);
     iterator_L<T> operator--();
@@ -22,7 +22,7 @@ public:
     bool operator==(const iterator_L<T> &it) const;
 
 private:
-	class list_element<T>* ptr;
+    class list_element<T>* ptr;
     friend class list_t<T>;
 };
 
@@ -62,12 +62,12 @@ public:
     void pop_back();
     void push_front(const T &d);
     void pop_front();
-	void sort();
-	void merge(const list_t& v);
-	void reverse();
-	void remove(const T d);
-	void erase_by_index(size_t s);
-	void unique();
+    void sort();
+    void merge(const list_t& v);
+    void reverse();
+    void remove(const T d);
+    void erase_by_index(size_t s);
+    void unique();
     void clear();
 
 private:

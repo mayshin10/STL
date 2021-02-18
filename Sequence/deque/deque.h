@@ -13,7 +13,14 @@ template <typename T>
 iterator_d<T>::iterator_d() : ptr(0) { }
 
 template <typename T>
-iterator_d<T>::iterator_d(const iterator_d<T>& it) { ptr = it.ptr; }
+iterator_d<T>::iterator_d(const iterator_d<T>& it) { 
+	ptr = it.ptr; 
+}
+
+template <typename T>
+iterator_d<T>::~iterator_d(){
+   	ptr = 0;
+}
 
 template <typename T>
 T& iterator_d<T>::operator*() const { return *ptr; }
@@ -22,6 +29,12 @@ template <typename T>
 iterator_d<T> iterator_d<T>::operator+(size_t s) {
 	ptr += s;
 	return *this;
+}
+
+template <typename T>
+iterator_d<T> iterator_d<T>::operator-(size_t s) {
+        ptr -= s;
+        return *this;
 }
 
 template <typename T>
@@ -67,10 +80,16 @@ deque_t<T>::deque_t() {
 }
 
 template<typename T>
-deque_t<T>::deque_t(const deque_t& v) {  }
+deque_t<T>::deque_t(const deque_t& v) {  
+	num_elements = v.num_elements;
+	array = new T[num_elements+array_size];
+}
 
 template<typename T>
-deque_t<T>::~deque_t() {}
+deque_t<T>::~deque_t() {
+	clear();
+	delete[] array;
+}
 
 template<typename T>
 deque_t<T>& deque_t<T>::operator=(const deque_t& v) {
@@ -149,6 +168,9 @@ void deque_t<T>::pop_front() {
 }
 
 template<typename T>
-void deque_t<T>::clear() {array = 0; num_elements = 0;}
+void deque_t<T>::clear() {
+	array = 0; 
+	num_elements = 0;
+}
 
 #endif

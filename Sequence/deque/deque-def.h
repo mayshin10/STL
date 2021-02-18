@@ -8,9 +8,10 @@ class iterator_d {
 public:
     iterator_d();
     iterator_d(const iterator_d<T> &it);
-
+    ~iterator_d();
     T& operator*() const;
     iterator_d<T> operator+(size_t s);
+    iterator_d<T> operator-(size_t s);
     iterator_d<T> operator++();
     iterator_d<T> operator++(int);
     iterator_d<T> operator--();

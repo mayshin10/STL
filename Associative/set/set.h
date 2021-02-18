@@ -87,6 +87,36 @@ set_t<T, Pred, Allocator>::set_t() {
 }
 
 template<typename T, typename Pred, typename Allocator>
+struct node<T>* set_t<T, Pred, Allocator>::copy_assist(const position& s){
+    position p = new node;
+    p->value = s->value;
+    p->left = p->right = NULL;
+    if(s->left != NULL)
+        p->left = copy_assist(s->left);
+    if(s->right !=NULL)
+        p->right = copy_assist(s->right);
+    return p;
+}
+
+template<typename T, typename Pred, typename Allocator>
+set_t<T, Pred, Allocator>::set_t(const set_t& s){
+    num_elements = s.num_elements;
+    set = copy_assist(s.set); 
+}
+
+template<typename T, typename Pred, typename Allocator>
+set_t<T, Pred, Allocator>& set_t<T, Pred, Allocator>::operator=(const set_t s){
+    num_elements = s.num_elements;
+    set = copy_assist(s.set);
+    return *this;
+}
+
+template<typename T, typename Pred, typename Allocator>
+set_t<T, Pred, Allocator>::~set_t(){
+    clear();
+}
+
+template<typename T, typename Pred, typename Allocator>
 bool set_t<T, Pred, Allocator>::empty(){ 
     return set==NULL;
 }
