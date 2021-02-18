@@ -39,7 +39,7 @@ Associative Containers
 Associative containers access an element using a key. They implement sorted data structures that can be queickly serached (O(log n) complexity).
 
 
-<img src="img_src/asc.png" border="3px" width="600px" align="center" > </img>
+<img src="img_src/asc.png" border="3px" align="center" > </img>
 
 
 
