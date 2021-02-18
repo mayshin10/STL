@@ -15,7 +15,9 @@ class pri_queue_t{
         void pop();
 
     private:
-        class vector_t<T> vector;
+	void Heapify(unsigned n, vector_t<int> vector);
+	void Heapify(unsigned n, vector_t<std::string> vector);
+        class vector_t<T> vec;
 };
 
 #endif

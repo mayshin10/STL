@@ -85,6 +85,7 @@ int main () {
     cout << endl;
 
     pri_queue_t<string> q3;
+ 1000
 
     q3.push("100");
     q3.push("1");
@@ -117,7 +118,4 @@ int main () {
     cout << "top    : " << q3.top() << endl;
     cout << "size   : " << q3.size() << endl; 
     cout << endl;
-    pri_queue_t<string> pq(q3);
-   pq.push("1000000");
-    cout<<q3.size()<<' ' <<pq.size(); 
 }
