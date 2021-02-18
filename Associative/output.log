@@ -1,0 +1,56 @@
+
+ *** SET *** 
+
+empty? : yes
+size   : 0
+
+insert : yes
+insert : yes
+empty? : no
+size   : 3
+
+*it1   : 20
+*it1   : 40
+*it1   : 80
+
+insert : no
+insert : no
+empty? : no
+size   : 3
+
+*it1   : 4
+*it1   : 20
+*it1   : 80
+
+cannot find !!!
+
+here   : 20
+here   : 80
+empty? : yes
+size   : 0
+
+ *** MAP *** 
+
+empty? : yes
+size   : 0
+
+*it2 k : 0
+*it2 k : 1
+*it2 k : 2
+*it2 k : 3
+*it2 k : 4
+
+*it2 v : hel
+*it2 v : lo
+*it2 v :  
+*it2 v : wor
+*it2 v : ld
+
+helloworld
+helloworld
+
+empty? : yes
+size   : 0
+empty? : yes
+size   : 0
+

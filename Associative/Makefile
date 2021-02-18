@@ -1,15 +1,15 @@
 CXX=g++
 CFLAGS= -Wall -O2
-SRC=seq.cc
-HDR= vector.h vector-def.h deque.h deque-def.h list.h list-def.h 
+SRC=asc.cc
+HDR= map.h map=def.h set.h set=def.h
 OBJ=$(SRC: .cc =.o)
-EXE=seq
+EXE=asc
 
 .PHONY: default clean
 
 default: $(EXE)
-	./$(EXE) 1>seq.log
-	cat seq.log
+	./$(EXE) 1>output.log
+	cat output.log
 	
 	
 %.o: %.cc $(HDR)
@@ -20,4 +20,4 @@ $(EXE): $(OBJ)
 	$(CXX) $(CFLAGS) $(OBJ) -o $(EXE)
 	
 clean:
-	rm -f $(EXE) *.o *.log
+	rm -f asc *.o *.log

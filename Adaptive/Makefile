@@ -20,4 +20,4 @@ $(EXE): $(OBJ)
 	$(CXX) $(CFLAGS) $(OBJ) -o $(EXE)
 	
 clean:
-	rm -f main *.o output.log
+	rm -f $(EXE) *.o *.log

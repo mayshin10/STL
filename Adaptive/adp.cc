@@ -85,7 +85,6 @@ int main () {
     cout << endl;
 
     pri_queue_t<string> q3;
- 1000
 
     q3.push("100");
     q3.push("1");
