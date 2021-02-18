@@ -25,11 +25,25 @@ A sequence container is a container that stores objects of the same type in a li
 
 Adapter Containers
 --------------------------------------
-Adaptor Containers(Container adpators) provide a different interface for sequential containers. 
+Adaptor Containers(Container adpators) provide a different interface for sequential containers.
+
+
+<img src="adp.PNG" border="3px" align="center" > </img>
+
+
+
+ 
 
 Associative Containers
 --------------------------------------
 Associative containers access an element using a key. They implement sorted data structures that can be queickly serached (O(log n) complexity).
+
+
+<img src="asc.PNG" border="3px" align="center" > </img>
+
+
+
+
 
 
 
