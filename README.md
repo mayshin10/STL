@@ -17,7 +17,7 @@
 Sequence Containers
 --------------------------------------
 A sequence container is a container that stores objects of the same type in a linear arrangement. These are the functions supported by the Sequence containers in this library.
-
+<img src="table-seq.png" > </img>
 Adapter Containers
 --------------------------------------
 Adaptor Containers(Container adpators) provide a different interface for sequential containers. 
