@@ -19,7 +19,7 @@ Sequence Containers
 A sequence container is a container that stores objects of the same type in a linear arrangement. These are the functions supported by the Sequence containers in this library.
 
 
-<img src="img_src/seq.png" border="3px" align="right" > </img>
+<img src="img_src/seq.png" border="3px" align="left" > </img>
 
 
 
