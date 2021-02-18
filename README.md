@@ -19,7 +19,7 @@ Sequence Containers
 A sequence container is a container that stores objects of the same type in a linear arrangement. These are the functions supported by the Sequence containers in this library.
 
 
-<img src="img_src/seq.png" border="100px" align="center" > </img>
+<img src="img_src/seq.png" border="100px" align="center" > </img><br><br>
 
 
 
@@ -28,7 +28,7 @@ Adapter Containers
 Adaptor Containers(Container adpators) provide a different interface for sequential containers.
 
 
-<img src="img_src/adp.png" border="3px" align="center" > </img>
+<img src="img_src/adp.png" border="3px" align="center" > </img><br><br>
 
 
 
