@@ -1,5 +1,9 @@
 # STL
- File structure
+The Standar Template Library(STL) is a software library for the C++ programming language. This repository contains self-made STL, which is implemented compactly. 
+
+that is made by myself. It is implemented mainly key concept  
+
+File structure
 --------------------------------------
 * Sequence
 	+ vector
