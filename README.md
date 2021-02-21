@@ -5,16 +5,16 @@ The Standar Template Library(STL) is a software library for the C++ programming 
 File structure
 --------------------------------------
 * Sequence
-	+ vector
-	+ list
-	+ deque
+	+ ```vector```<br>
+	+ ```list```<br>
+	+ deque```<br>
 * Adaptive
-	+ stack
-	+ queue
-	+ pri_queue
+	+ ```stack```<br>
+	+ ```queue```<br>
+	+ ```pri_queue```<br>
 * Associative
-	+ set
-	+ map
+	+ ```set```<br>
+	+ ```map```<br>
 	
 
 Sequence Containers
