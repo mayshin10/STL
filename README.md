@@ -7,7 +7,7 @@ File structure
 * Sequence
 	+ ```vector```<br>
 	+ ```list```<br>
-	+ deque```<br>
+	+ ```deque```<br>
 * Adaptive
 	+ ```stack```<br>
 	+ ```queue```<br>
